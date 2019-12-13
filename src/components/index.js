@@ -1,0 +1,6 @@
+export * from './Header'
+export { default as Timer } from './Timer'
+export { default as Question } from './Question'
+export { default as Answers } from './Answers'
+export { default as Results } from './Results'
+export * from './Advert'
