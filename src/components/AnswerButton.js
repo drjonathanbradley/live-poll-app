@@ -29,7 +29,7 @@ export default class AnswerButton extends React.Component {
     return (
       <Button
         key={this.props.text + this.props.value}
-        size='massive'
+        size='huge'
         color='red'
         disabled={this.state.disabled}
         className='answer-button'
