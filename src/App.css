@@ -1,12 +1,27 @@
+body {
+  width: 1080px;
+  height: 1920px;
+}
+
 h1 {
   font-size: 3rem;
 }
 
+hr {
+  height: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+}
+
 .App {
+  width: 1080px;
+  height: 1920px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -45,9 +60,64 @@ h1 {
 .results-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-end;
-  width: 80%;
+  width: 100%;
   padding: 2em;
-  height: 500px;
+  height: 900px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.logo-svg {
+  max-width: 50%;
+}
+
+.answer-button {
+  animation-name: breath;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.bar-reset {
+  animation-name: grow;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.button-fade {
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+/* Standard syntax */
+@keyframes breath {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

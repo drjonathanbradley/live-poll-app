@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import AnswerButton from './AnswerButton'
 
 export default class Answers extends React.Component {
   render() {
@@ -7,16 +7,13 @@ export default class Answers extends React.Component {
       <div className='answers-container'>
         {this.props.answers.map((item, index) => {
           return (
-            <Button
+            <AnswerButton
               key={item}
-              size='massive'
-              color='red'
-              onClick={() => {
-                this.props.update(index)
-              }}
-            >
-              {item}
-            </Button>
+              text={item}
+              value={this.props.results}
+              index={index}
+              update={this.props.update}
+            />
           )
         })}
       </div>
